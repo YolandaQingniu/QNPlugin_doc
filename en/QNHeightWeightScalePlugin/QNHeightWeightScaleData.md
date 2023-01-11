@@ -11,7 +11,7 @@
 | user | [QNHeightWeightUser](./QNHeightWeightUser.md)  | 用户信息  |
 | weight | String |体重，单位kg 两位有效数值 |
 | height | String | 身高，单位cm  两位有效数值  |
-| bmi | String |BMI  一位有效数值 |
+| BMI | String |BMI  一位有效数值 |
 | bodyFatRate | String |体脂肪率 一位有效数值 |
 | subcutaneousFatRate | String |皮下脂肪率 一位有效数值 |
 | visceralFatLevel | String |内脏脂肪等级 一位有效数值 |
@@ -40,7 +40,11 @@
 
 
 #### makeDataComplete:
-完善测量数据
+
+pass userinfo to calcuate a complete data
+<br>if data is complete already ,return itself
+<br>if data is not complete but pass a null QNUser ,return itself
+
 ##### 参数
 | 名称 | 类型 | 描述 |
 | ------ | ------ | ------ |

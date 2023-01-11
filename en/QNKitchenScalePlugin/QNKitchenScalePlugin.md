@@ -1,10 +1,10 @@
-# QNKitchenPlugin
+# QNKitchenScalePlugin
 
 厨房秤设备管理
 
 ## API
 
-### setKitchenPlugin
+### setKitchenScalePlugin
 
 设置厨房秤管理类
 

@@ -57,8 +57,6 @@
     <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="QNScaleStoredData.html" />
-    
     
     <link rel="prev" href="QNWiFiInfo.html" />
     
@@ -173,14 +171,14 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" >
+        <li class="chapter " data-level="1.3" data-path="../QNScalePluginDoc.html">
             
-                <span>
+                <a href="../QNScalePluginDoc.html">
             
                     
                     Household scale
             
-                </span>
+                </a>
             
 
             
@@ -369,19 +367,6 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.15" data-path="QNScaleStoredData.html">
-            
-                <a href="QNScaleStoredData.html">
-            
-                    
-                    QNScaleStoredData
-            
-                </a>
-            
-
-            
-        </li>
-    
 
             </ul>
             
@@ -527,7 +512,7 @@
 <td>Height, a two-digit valid value in cm</td>
 </tr>
 <tr>
-<td>bmi</td>
+<td>BMI</td>
 <td>String</td>
 <td>BMI, a one-digit significant value</td>
 </tr>
@@ -744,7 +729,9 @@
 </tbody>
 </table>
 <h3 id="makedatacomplete">makeDataComplete</h3>
-<p>Perfect measurement data</p>
+<p>pass userinfo to calcuate a complete data
+<br>if data is complete already ,return itself
+<br>if data is not complete but pass a null QNUser ,return itself</p>
 <h5 id="parameter">parameter</h5>
 <table>
 <thead>
@@ -759,47 +746,6 @@
 <td>user</td>
 <td><a href="QNUser.html">QNUser</a></td>
 <td>User information</td>
-</tr>
-</tbody>
-</table>
-<h5 id="return-value">Return value</h5>
-<table>
-<thead>
-<tr>
-<th>name</th>
-<th>type</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>scaleData</td>
-<td>QNScaleData</td>
-<td>Measurement data</td>
-</tr>
-</tbody>
-</table>
-<h3 id="controlfatthreshold">controlFatThreshold</h3>
-<p>Fit the measured data and control the abrupt change of the measured data</p>
-<h5 id="parameter">parameter</h5>
-<table>
-<thead>
-<tr>
-<th>name</th>
-<th>type</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>threshold</td>
-<td>double</td>
-<td>Control range</td>
-</tr>
-<tr>
-<td>hmac</td>
-<td>String</td>
-<td>Last measurement data encryption string</td>
 </tr>
 </tbody>
 </table>
@@ -847,14 +793,10 @@
 
             
                 
-                <a href="QNWiFiInfo.html" class="navigation navigation-prev " aria-label="Previous page: QNWiFiInfo">
+                <a href="QNWiFiInfo.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: QNWiFiInfo">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="QNScaleStoredData.html" class="navigation navigation-next " aria-label="Next page: QNScaleStoredData">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -863,7 +805,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"QNScaleData","level":"1.3.14","depth":2,"next":{"title":"QNScaleStoredData","level":"1.3.15","depth":2,"path":"QNScalePlugin/Model/QNScaleStoredData.md","ref":"QNScalePlugin/Model/QNScaleStoredData.md","articles":[]},"previous":{"title":"QNWiFiInfo","level":"1.3.13","depth":2,"path":"QNScalePlugin/Model/QNWiFiInfo.md","ref":"QNScalePlugin/Model/QNWiFiInfo.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"QNScalePlugin/Model/QNScaleData.md","mtime":"2023-01-09T07:06:48.586Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-09T09:48:21.553Z"},"basePath":"../..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"QNScaleData","level":"1.3.14","depth":2,"next":{"title":"schedule","level":"2.1","depth":1,"ref":"","articles":[{"title":"Update log","level":"2.1.1","depth":2,"path":"History/history.md","ref":"History/history.md","articles":[]},{"title":"Code","level":"2.1.2","depth":2,"path":"Code.md","ref":"Code.md","articles":[]}]},"previous":{"title":"QNWiFiInfo","level":"1.3.13","depth":2,"path":"QNScalePlugin/Model/QNWiFiInfo.md","ref":"QNScalePlugin/Model/QNWiFiInfo.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"QNScalePlugin/Model/QNScaleData.md","mtime":"2023-01-11T10:16:21.989Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-11T10:16:46.786Z"},"basePath":"../..","book":{"language":"en"}});
         });
     </script>
 </div>

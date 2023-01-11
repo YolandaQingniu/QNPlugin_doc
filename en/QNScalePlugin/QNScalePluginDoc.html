@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>QNUserScaleMp · GitBook</title>
+        <title>Household scale · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Listener/QNScaleDeviceListener.html" />
+    <link rel="next" href="QNScalePlugin.html" />
     
     
-    <link rel="prev" href="QNScaleWiFiMp.html" />
+    <link rel="prev" href="../QNPlugin/QNLogListener.html" />
     
 
     </head>
@@ -173,7 +173,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="QNScalePluginDoc.html">
+        <li class="chapter active" data-level="1.3" data-path="QNScalePluginDoc.html">
             
                 <a href="QNScalePluginDoc.html">
             
@@ -213,7 +213,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.3" data-path="QNUserScaleMp.html">
+        <li class="chapter " data-level="1.3.3" data-path="QNUserScaleMp.html">
             
                 <a href="QNUserScaleMp.html">
             
@@ -456,7 +456,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >QNUserScaleMp</a>
+        <a href=".." >Household scale</a>
     </h1>
 </div>
 
@@ -471,80 +471,26 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="qnuserscalemp">QNUserScaleMp</h1>
-<p>User scale device user management</p>
-<h2 id="api">API</h2>
-<h3 id="setuserscaleeventlistener">setUserScaleEventListener</h3>
-<p>Set up the user management listener</p>
-<h5 id="parameter">parameter</h5>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">name</th>
-<th style="text-align:left">type</th>
-<th style="text-align:left">description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">userEventListener</td>
-<td style="text-align:left"><a href="Listener/QNUserScaleEventListener.html">QNUserScaleEventListener</a></td>
-<td style="text-align:left">Device user management listener</td>
-</tr>
-</tbody>
-</table>
-<h3 id="setmeasureusertouserdevice">setMeasureUserToUserDevice</h3>
-<p>Set the scale end to measure user information</p>
-<h5 id="parameter">parameter</h5>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">name</th>
-<th style="text-align:left">type</th>
-<th style="text-align:left">description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">device</td>
-<td style="text-align:left"><a href="Model/QNScaleDevice.html">QNScaleDevice</a></td>
-<td style="text-align:left">Household weighing equipment</td>
-</tr>
-<tr>
-<td style="text-align:left">user</td>
-<td style="text-align:left"><a href="Model/QNScaleUser.html">QNScaleUser</a></td>
-<td style="text-align:left">User information on the scale</td>
-</tr>
-</tbody>
-</table>
-<h5 id="return-value">Return value</h5>
-<p>Type&#xFF1A;<a href="../Code.html">int See list of status codes for details</a></p>
-<h3 id="deleteuserlist">deleteUserList</h3>
-<p>Delete the user information on the scale</p>
-<h5 id="parameter">parameter</h5>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">name</th>
-<th style="text-align:left">type</th>
-<th style="text-align:left">description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">device</td>
-<td style="text-align:left"><a href="Model/QNScaleDevice.html">QNScaleDevice</a></td>
-<td style="text-align:left">Household weighing equipment</td>
-</tr>
-<tr>
-<td style="text-align:left">useIndexList</td>
-<td style="text-align:left">Array\<int\></int\></td>
-<td style="text-align:left">To delete the list of user numbers</td>
-</tr>
-</tbody>
-</table>
-<h5 id="return-value">Return value</h5>
-<p>Type&#xFF1A;<a href="../Code.html">int See list of status codes for details</a></p>
+                                <h1 id="home-scale-product-introduction">Home scale product introduction</h1>
+<p>Household scales are a general term for a series of smart body fat scales mainly for home applications launched by our company.
+In actual use, household scales are divided into <code>Bluetooth scales</code> and <code>Bluetooth WiFi dual-mode scales</code> according to the data communication method; according to whether the scale terminal supports storing user information, they are divided into <code>common scales</code> and <code>user scales</code>.</p>
+<h3 id="general-bluetooth-communication-function">General Bluetooth communication function</h3>
+<p>All of our home scale devices support Bluetooth communication. The APP can establish a connection with the home scale through the SDK, and can obtain real-time changes in the status of the Bluetooth connection and the working status of the scale. It can measure the weight in real time, the measurement results, and the stored data recorded by the scale (up to 20 pieces).</p>
+<h3 id="support-wifi-communication-function">Support WiFi communication function</h3>
+<p>On the basis of supporting the Bluetooth communication function, it will also support the WiFi communication function. To use the WiFi communication function, the APP needs to call the SDK to configure <a href="Model/QNWiFiInfo.html">QNWiFiInfo</a> for the scale. The APP server needs to connect to <a href="https://github.com/YolandaQingniu/qn_wsp_full_server_doc/blob/main/README.zh-CN.md" target="_blank">Docker</a> provided by our company.
+After the configuration is completed, the measurement data generated by the scale without connecting to Bluetooth will actively connect to the previously configured WiFi after the measurement is completed. <a href="Model/QNWiFiInfo.html#serverurl">serverUrl server address</a>.</p>
+<h3 id="support-storage-scale-user-function">Support storage scale user function</h3>
+<p>Compared with ordinary scales, most of the scales can only display weight, and other measurement data need SDK to cooperate with the working principle of display. For scales that support user measurement on the scale end, after setting the user information on the scale end, the user can use the measurement function without the Bluetooth connection. The scale will display the measurement indicators after the measurement. The results usually include body fat percentage, bmi, skeletal muscle and other indicators. , to improve user experience.
+Regarding the user setting of the scale end, it is divided into two usage scenarios: first-time registered scale end user and re-used access scale end user:</p>
+<ul>
+<li>For the first time to use the registered scale end user, the scale end can record up to 8 user information. When a user uses it for the first time, after the scale is successfully connected and allowed to interact with the scale, you need to call <a href="QNUserScaleMp.html#setmeasureusertouserdevice">setMeasureUserToUserDevice</a> to synchronize user information to the scale, you need to <code>note</code> <a href="Model/QNScaleUser.html#index">QNScaleUser.index</a> == 0, the built-in SDK performs the operation of registering the scale end user. The process of registering a user will call back to the APP through the real-time status of <a href="Listener/QNUserScaleEventListener.html">QNUserScaleEventListener</a>. When the user registers successfully, the APP needs to record the <a href="Model/QNScaleUser.html#index">index</a> returned by the SDK at this time to access the scale end user when using it again. After the user is successfully registered, the connection SDK will be built in User Access Actions.</li>
+<li>Re-use users who access the scale end, that is, users who have registered on the scale end, when they use the scale again, they need to connect to the scale successfully, and after allowing interaction with the scale, they need to call <a href="QNUserScaleMp.html#setmeasureusertouserdevice">setMeasureUserToUserDevice</a> <a href="Model/QNScaleUser.html#index">QNScaleUser.index</a> needs to be assigned the <a href="Model/QNScaleUser.html#index">index</a> that was called back by the SDK during the last registration. At this time, the SDK will be built into the access user operation , the access user process will be called back to the APP through the real-time status of <a href="Listener/QNUserScaleEventListener.html">QNUserScaleEventListener</a>.</li>
+</ul>
+<h3 id="sequence-diagram-of-home-scale-use">Sequence diagram of home scale use</h3>
+<p> <img src="img/img_init_sdk.png" alt=""></p>
+<p> <img src="img/img_ble_scale.png" alt=""></p>
+<p> <img src="img/img_wifi.png" alt=""></p>
+<p> <img src="img/img_scale_user.png" alt=""></p>
 
                                 
                                 </section>
@@ -572,12 +518,12 @@
 
             
                 
-                <a href="QNScaleWiFiMp.html" class="navigation navigation-prev " aria-label="Previous page: QNScaleWiFiMp">
+                <a href="../QNPlugin/QNLogListener.html" class="navigation navigation-prev " aria-label="Previous page: QNLogListener">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="Listener/QNScaleDeviceListener.html" class="navigation navigation-next " aria-label="Next page: QNScaleDeviceListener">
+                <a href="QNScalePlugin.html" class="navigation navigation-next " aria-label="Next page: QNScalePlugin">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -588,7 +534,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"QNUserScaleMp","level":"1.3.3","depth":2,"next":{"title":"QNScaleDeviceListener","level":"1.3.4","depth":2,"path":"QNScalePlugin/Listener/QNScaleDeviceListener.md","ref":"QNScalePlugin/Listener/QNScaleDeviceListener.md","articles":[]},"previous":{"title":"QNScaleWiFiMp","level":"1.3.2","depth":2,"path":"QNScalePlugin/QNScaleWiFiMp.md","ref":"QNScalePlugin/QNScaleWiFiMp.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"QNScalePlugin/QNUserScaleMp.md","mtime":"2023-01-09T07:58:23.403Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-11T10:16:46.786Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Household scale","level":"1.3","depth":1,"next":{"title":"QNScalePlugin","level":"1.3.1","depth":2,"path":"QNScalePlugin/QNScalePlugin.md","ref":"QNScalePlugin/QNScalePlugin.md","articles":[]},"previous":{"title":"QNLogListener","level":"1.2.4","depth":2,"path":"QNPlugin/QNLogListener.md","ref":"QNPlugin/QNLogListener.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"QNScalePlugin/QNScalePluginDoc.md","mtime":"2023-01-11T10:16:21.991Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-11T10:16:46.786Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>

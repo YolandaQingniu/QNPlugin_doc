@@ -57,8 +57,6 @@
     <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="QNScaleStoredData.html" />
-    
     
     <link rel="prev" href="QNWiFiInfo.html" />
     
@@ -367,14 +365,14 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" >
+        <li class="chapter " data-level="1.5" data-path="../QNScalePluginDoc.html">
             
-                <span>
+                <a href="../QNScalePluginDoc.html">
             
                     
                     家用秤
             
-                </span>
+                </a>
             
 
             
@@ -563,19 +561,6 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.15" data-path="QNScaleStoredData.html">
-            
-                <a href="QNScaleStoredData.html">
-            
-                    
-                    QNScaleStoredData
-            
-                </a>
-            
-
-            
-        </li>
-    
 
             </ul>
             
@@ -600,7 +585,7 @@
                 <a href="../../QNKitchenScalePlugin/QNKitchenScalePlugin.html">
             
                     
-                    QNKitchenPlugin
+                    QNKitchenScalePlugin
             
                 </a>
             
@@ -613,7 +598,7 @@
                 <a href="../../QNKitchenScalePlugin/QNKitchenScaleData.html">
             
                     
-                    QNKitchenData
+                    QNKitchenScaleData
             
                 </a>
             
@@ -626,7 +611,7 @@
                 <a href="../../QNKitchenScalePlugin/QNKitchenScaleDataListener.html">
             
                     
-                    QNKitchenDataListener
+                    QNKitchenScaleDataListener
             
                 </a>
             
@@ -639,7 +624,7 @@
                 <a href="../../QNKitchenScalePlugin/QNKitchenScaleDevice.html">
             
                     
-                    QNKitchenDevice
+                    QNKitchenScaleDevice
             
                 </a>
             
@@ -652,7 +637,7 @@
                 <a href="../../QNKitchenScalePlugin/QNKitchenScaleDeviceListener.html">
             
                     
-                    QNKitchenDeviceListener
+                    QNKitchenScaleDeviceListener
             
                 </a>
             
@@ -947,7 +932,7 @@
 <td>&#x8EAB;&#x9AD8;&#xFF0C;&#x5355;&#x4F4D;cm  &#x4E24;&#x4F4D;&#x6709;&#x6548;&#x6570;&#x503C;</td>
 </tr>
 <tr>
-<td>bmi</td>
+<td>BMI</td>
 <td>String</td>
 <td>BMI  &#x4E00;&#x4F4D;&#x6709;&#x6548;&#x6570;&#x503C;</td>
 </tr>
@@ -1164,7 +1149,9 @@
 </tbody>
 </table>
 <h3 id="makedatacomplete">makeDataComplete</h3>
-<p>&#x5B8C;&#x5584;&#x6D4B;&#x91CF;&#x6570;&#x636E;</p>
+<p>&#x4F20;&#x5165;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x4EE5;&#x8BA1;&#x7B97;&#x5B8C;&#x6574;&#x7684;&#x6D4B;&#x91CF;&#x6570;&#x636E;
+<br>&#x5982;&#x679C;&#x6570;&#x636E;&#x5DF2;&#x662F;&#x5B8C;&#x6574;&#x7684;&#xFF0C;&#x5219;&#x4E0D;&#x8BA1;&#x7B97;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x672C;&#x8EAB;
+<br>&#x5982;&#x679C;&#x6570;&#x636E;&#x4E0D;&#x5B8C;&#x6574;&#x4F46;&#x4F20;&#x5165;&#x7684;QNUser&#x4E3A;null&#xFF0C;&#x5219;&#x4E0D;&#x8BA1;&#x7B97;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x672C;&#x8EAB;</p>
 <h5 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h5>
 <table>
 <thead>
@@ -1179,47 +1166,6 @@
 <td>user</td>
 <td><a href="QNUser.html">QNUser</a></td>
 <td>&#x7528;&#x6237;&#x4FE1;&#x606F;</td>
-</tr>
-</tbody>
-</table>
-<h5 id="&#x8FD4;&#x56DE;&#x503C;">&#x8FD4;&#x56DE;&#x503C;</h5>
-<table>
-<thead>
-<tr>
-<th>&#x540D;&#x79F0;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x63CF;&#x8FF0;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>scaleData</td>
-<td>QNScaleData</td>
-<td>&#x6D4B;&#x91CF;&#x6570;&#x636E;</td>
-</tr>
-</tbody>
-</table>
-<h3 id="controlfatthreshold">controlFatThreshold</h3>
-<p>&#x62DF;&#x5408;&#x6D4B;&#x91CF;&#x6570;&#x636E;,&#x63A7;&#x5236;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x7A81;&#x53D8;</p>
-<h5 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h5>
-<table>
-<thead>
-<tr>
-<th>&#x540D;&#x79F0;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x63CF;&#x8FF0;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>threshold</td>
-<td>double</td>
-<td>&#x63A7;&#x5236;&#x53D8;&#x5316;&#x8303;&#x56F4;</td>
-</tr>
-<tr>
-<td>hmac</td>
-<td>String</td>
-<td>&#x6700;&#x8FD1;&#x4E00;&#x6B21;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x52A0;&#x5BC6;&#x5B57;&#x7B26;&#x4E32;</td>
 </tr>
 </tbody>
 </table>
@@ -1267,14 +1213,10 @@
 
             
                 
-                <a href="QNWiFiInfo.html" class="navigation navigation-prev " aria-label="Previous page: QNWiFiInfo">
+                <a href="QNWiFiInfo.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: QNWiFiInfo">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="QNScaleStoredData.html" class="navigation navigation-next " aria-label="Next page: QNScaleStoredData">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -1283,7 +1225,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"QNScaleData","level":"1.5.14","depth":2,"next":{"title":"QNScaleStoredData","level":"1.5.15","depth":2,"path":"QNScalePlugin/Model/QNScaleStoredData.md","ref":"QNScalePlugin/Model/QNScaleStoredData.md","articles":[]},"previous":{"title":"QNWiFiInfo","level":"1.5.13","depth":2,"path":"QNScalePlugin/Model/QNWiFiInfo.md","ref":"QNScalePlugin/Model/QNWiFiInfo.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"QNScalePlugin/Model/QNScaleData.md","mtime":"2023-01-09T09:36:16.117Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-09T09:48:21.553Z"},"basePath":"../..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"QNScaleData","level":"1.5.14","depth":2,"next":{"title":"厨房秤","level":"1.6","depth":1,"ref":"","articles":[{"title":"QNKitchenScalePlugin","level":"1.6.1","depth":2,"path":"QNKitchenScalePlugin/QNKitchenScalePlugin.md","ref":"QNKitchenScalePlugin/QNKitchenScalePlugin.md","articles":[]},{"title":"QNKitchenScaleData","level":"1.6.2","depth":2,"path":"QNKitchenScalePlugin/QNKitchenScaleData.md","ref":"QNKitchenScalePlugin/QNKitchenScaleData.md","articles":[]},{"title":"QNKitchenScaleDataListener","level":"1.6.3","depth":2,"path":"QNKitchenScalePlugin/QNKitchenScaleDataListener.md","ref":"QNKitchenScalePlugin/QNKitchenScaleDataListener.md","articles":[]},{"title":"QNKitchenScaleDevice","level":"1.6.4","depth":2,"path":"QNKitchenScalePlugin/QNKitchenScaleDevice.md","ref":"QNKitchenScalePlugin/QNKitchenScaleDevice.md","articles":[]},{"title":"QNKitchenScaleDeviceListener","level":"1.6.5","depth":2,"path":"QNKitchenScalePlugin/QNKitchenScaleDeviceListener.md","ref":"QNKitchenScalePlugin/QNKitchenScaleDeviceListener.md","articles":[]},{"title":"QNKitchenScaleOperate","level":"1.6.6","depth":2,"path":"QNKitchenScalePlugin/QNKitchenScaleOperate.md","ref":"QNKitchenScalePlugin/QNKitchenScaleOperate.md","articles":[]}]},"previous":{"title":"QNWiFiInfo","level":"1.5.13","depth":2,"path":"QNScalePlugin/Model/QNWiFiInfo.md","ref":"QNScalePlugin/Model/QNWiFiInfo.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"QNScalePlugin/Model/QNScaleData.md","mtime":"2023-01-11T10:16:22.018Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-11T10:16:46.786Z"},"basePath":"../..","book":{"language":"zh"}});
         });
     </script>
 </div>
